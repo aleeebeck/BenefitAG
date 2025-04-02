@@ -1,0 +1,322 @@
+/* Importar una tipografía más elegante */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Barra de navegación */
+header {
+    background: linear-gradient(to right, #2e7d32, #1565c0);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Sección Principal */
+/* Animación para el contenedor del inicio */
+/* Animación para el contenedor del inicio */
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  #inicio {
+    animation: slideIn 1.5s ease-out;
+    opacity: 0; /* Para que empiece invisible */
+    animation-fill-mode: forwards; /* Para que se quede visible después de la animación */
+  }
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  #inicio {
+    animation: slideIn 1.5s ease-out;
+  }
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background: white;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-texto {
+    max-width: 50%;
+}
+
+.hero-imagen img {
+    width: 320px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hero-imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Biografía */
+.biografia {
+    background: #ffffff;
+    padding: 60px;
+    text-align: center;
+}
+
+.biografia h2 {
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.biografia-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.biografia-contenido img {
+    width: 220px;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 5px solid #2e7d32;
+}
+
+/* Servicios */
+.servicios {
+    background: #e3f2fd;
+    padding: 60px;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-weight: 600;
+    color: #1565c0;
+}
+
+.servicio {
+    background: white;
+    padding: 25px;
+    margin: 15px;
+    display: inline-block;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.servicio img {
+    width: 100%;  
+    max-width: 250px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+/* Animación para que los servicios aparezcan con efecto fade-in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Inicia más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Llega a su posición normal */
+    }
+}
+
+/* Aplica la animación a cada servicio */
+.servicio {
+    background: white;
+    padding: 25px;
+    margin: 15px;
+    display: inline-block;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0; /* Oculta inicialmente */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Agregar un retraso diferente para cada servicio */
+.servicio:nth-child(1) { animation-delay: 0.2s; }
+.servicio:nth-child(2) { animation-delay: 0.4s; }
+.servicio:nth-child(3) { animation-delay: 0.6s; }
+/* Animación para el efecto zoom */
+.servicio img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Efecto zoom al pasar el mouse */
+.servicio img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
+.contacto {
+    background: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.contacto input, 
+.contacto textarea {
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+    padding: 12px;
+    border: 2px solid #1565c0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contacto button {
+    background: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.contacto button:hover {
+    background: #1b5e20;
+}
+
+/* Pie de página */
+footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+/* Sección Contacto */
+.contacto {
+    background: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: #1565c0;
+    font-weight: 600;
+}
+
+.contacto p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contacto form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contacto input, 
+.contacto textarea {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 12px;
+    border: 2px solid #1565c0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    border-color: #2e7d32;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(46, 125, 50, 0.5);
+}
+
+.contacto button {
+    background: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.contacto button:hover {
+    background: #1b5e20;
+}
+/* Animación para la sección de contacto */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #contacto {
+    animation: fadeInUp 1s ease-out;
+    opacity: 0;
+    animation-delay: 0.5s; /* Desfase para que la animación se inicie después */
+  }
+ 
